@@ -11,61 +11,77 @@
 <body>
 
     <h1> Dateomatic V1</h1>
+    
     <p>
         Input the events, create a QR code, share it.
     </p>
 
-<form class='forma'>  
+<!--Method='GET' appends everything to the URL because we are still using the local
+    machine and not the SERVER.. once we use the SERVER we should use POST, or save it IN JS-->
+
+   
+<form id='user-form' class='forma' action="#" method="GET" >  
+    
     <div>   
         <label> Event Name </label>
-        <input type="text" name="">
+        <input id ='event-name' type="text" name="" required placeholder="Name of the Event">
     </div>
     
     <br>
-
+    
     <div>   
         <label> Location </label>
-        <input type="text" name=''>
+        <input id ='location' type="text" name='' required placeholder="Location of the Event">
     </div>
+    
     <br>
+    
     <div>   
         <label> Start Date </label>
-        <input type="date" name="">
+        <input  id ='start-date' type="date" name="" required placeholder="Start Date">
+    </div>
+    
+    <br>
+    
+    <div>   
+        <label> Start Time </label>
+        <input id ='start-time' type="time" name='' required placeholder="Start Time">
+    </div>
+    
+    <br>
+    
+    <div>   
+        <label> Time Zone </label>
+        <input id='time-zone' type="text" name="" required placeholder="Time Zone">
+    </div>
+    
+    <br>
+    
+    <div>   
+        <label> End Time </label>
+        <input id ='end-time' type="time" name="" required placeholder="End Time">
+    </div>
+    
+    <br>    
+    
+    <div>   
+        <label> End Date </label>
+        <input id ='end-date' type="date" name='' required placeholder="End Date">
     </div>
     
     <br>
 
-    <div>   
-        <label> Start Time </label>
-        <input type="time" name=''>
+    <div class='submitButton'>   
+        <input id='submit-button' type="submit" value= "Submit" >
     </div>
-    <br>
-    <div>   
-        <label> Time Zone </label>
-        <input type="text" name="">
-    </div>
-    <br>
 
-    <div>   
-        <label> End Date </label>
-        <input type="date" name=''>
-    </div>
-    <br>
-    <div>   
-        <label> End Time </label>
-        <input type="time" name="">
-    </div>
-    <br>
-    <div>   
-        <label> demo </label>
-        <input type="datetime-local" name=''>
+    <div>
+        <button  id='reset-button'> Reset </button>
     </div>
 
 </form>
 
-
-
-
+<script src="./index.js"></script>
 
 </body>
 

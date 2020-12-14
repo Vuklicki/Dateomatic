@@ -6,10 +6,15 @@
 
 body {
     background-color: #e0e0e0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
 }
 
 h1 {
     position: absolute;
+    height: auto;
     left: 50%;
     top: 5%;
     transform: translateX(-50%) translateY(-50%);
@@ -20,38 +25,14 @@ h1 {
 
 p {
     position: absolute;
+    height: auto;
     left: 50%;
     top: 10%;
     transform: translateX(-50%) translateY(-50%);
     text-align: center;
     font-size: 2em;
 
-
 }
-
-.eventName {
-
-    position: absolute;
-    left: 45%;
-    top: 20%;
-    transform: translateX(-50%) translateY(-50%);
-    text-align: center;
-    font-size: 1.3em;
-
-}
-
-.location {
-
-    position: fixed;
-    left: 45%;
-    top: 24%;
-    transform: translateX(-50%) translateY(-50%);
-    text-align: center;
-    font-size: 1.3em;
-
-}
-
-
 
 label{
   display: inline-block;
@@ -59,11 +40,40 @@ label{
   text-align: left;
 }
 
-.forma {
 
-position: fixed;
+/* this changes the entire form */
+.forma {
+width: 300px;
+position: absolute;
 left: 45%;
 top: 35%;
 transform: translateX(-50%) translateY(-50%);
+
+}
+
+/* This is for every input box */
+input {
+    width: 150px;
+}
+
+input[type=submit] {
+    position: absolute;
+    top: 110%;
+    left: 58%;
+    width: 125px;
+    height: 50px;
+}
+
+input:focus, textarea:focus {
+
+    box-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
+    border: 1px solid rgb(255, 0 ,0);
+}
+
+button[id=reset-button] {
+    position: absolute;
+    top: 110%;
+    width: 125px;
+    height: 50px; 
 
 }
