@@ -20,66 +20,84 @@
     machine and not the SERVER.. once we use the SERVER we should use POST, or save it IN JS-->
 
    
-<form id='user-form' class='forma' action="#" method="GET" >  
+<form name='User_Froma' id='user_form' class='forma' action="#" method="POST" >  
     
     <div>   
         <label> Event Name </label>
-        <input id ='event-name' type="text" name="" required placeholder="Name of the Event">
+        <input id ='event_name' type="text" name="eventName"  placeholder="Name of the Event">
     </div>
     
     <br>
     
     <div>   
         <label> Location </label>
-        <input id ='location' type="text" name='' required placeholder="Location of the Event">
+        <input id ='location' type="text" name=''  placeholder="Location of the Event">
     </div>
     
     <br>
     
     <div>   
         <label> Start Date </label>
-        <input  id ='start-date' type="date" name="" required placeholder="Start Date">
+        <input  id ='start_date' type="date" name=""  placeholder="Start Date">
     </div>
     
     <br>
     
     <div>   
         <label> Start Time </label>
-        <input id ='start-time' type="time" name='' required placeholder="Start Time">
+        <input id ='start_time' type="time" name=''  placeholder="Start Time">
     </div>
     
     <br>
     
     <div>   
         <label> Time Zone </label>
-        <input id='time-zone' type="text" name="" required placeholder="Time Zone">
+        <input id='time_zone' type="text" name=""  placeholder="Time Zone">
     </div>
     
     <br>
     
     <div>   
         <label> End Time </label>
-        <input id ='end-time' type="time" name="" required placeholder="End Time">
+        <input id ='end_time' type="time" name=""  placeholder="End Time">
     </div>
     
     <br>    
     
     <div>   
         <label> End Date </label>
-        <input id ='end-date' type="date" name='' required placeholder="End Date">
+        <input id ='end_date' type="date" name=''  placeholder="End Date">
     </div>
     
     <br>
 
     <div class='submitButton'>   
-        <input id='submit-button' type="submit" value= "Submit" >
+        <input id='submit_button' type="submit" value= "Submit" >
     </div>
 
     <div>
-        <button  id='reset-button'> Reset </button>
+        <button  id='reset_button'> Reset </button>
     </div>
 
+
+    <label> Output Test </label>
+        <input id='output_test' type="text" name="Miodrag" >
+    
 </form>
+
+<table id='display'>
+    <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Start Date</th>
+        <th>Start Time</th>
+        <th>Time Zone</th>
+        <th>End Time</th>
+        <th>End Date</th>
+        
+    </tr>
+</table>
+
 
 <script src="./index.js"></script>
 
