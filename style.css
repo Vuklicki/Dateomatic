@@ -1,0 +1,109 @@
+
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-color: #e0e0e0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    position: absolute;
+    height: auto;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    font-family: Stencil Std, fantasy;
+    font-size: 3em ;
+}
+
+p {
+    position: absolute;
+    height: auto;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    font-size: 2em;
+
+}
+
+label {
+  display: inline-block;
+  width: 140px;
+  text-align: left;
+}
+
+
+/* this changes the entire form */
+.forma {
+width: 300px;
+position: absolute;
+left: 15%;
+top: 35%;
+transform: translateX(-50%) translateY(-50%);
+
+}
+
+/* This is for every input box */
+input {
+    width: 150px;
+}
+
+input[type=submit] {
+    position: absolute;
+    top: 110%;
+    left: 58%;
+    width: 125px;
+    height: 50px;
+}
+
+input:focus, textarea:focus {
+
+    box-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
+    border: 1px solid rgb(255, 0 ,0);
+}
+
+button[id=reset_button] {
+    position: absolute;
+    top: 110%;
+    width: 125px;
+    height: 50px; 
+
+}
+
+
+table {
+    position: absolute;
+    border-collapse: collapse;
+    width: 50%;
+    top: 16%;
+    left: 27%;
+    
+}
+
+table, th, td {
+    border: 2px solid black;
+    padding: 5px;
+
+}
+
+th {
+    font-size: 15px;
+    font-weight: 700;
+    font-family: Arial;
+    color: #004d00;
+}
+
+td {
+    font-size: 10px;
+    color: crimson;
+    font-weight: 400;
+    font-family: Georgia;
+}
