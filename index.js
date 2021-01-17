@@ -1,146 +1,66 @@
-var submit = document.getElementById('submit_button');
-submit.addEventListener('click', displayEvents, );
 
 
-var row = 1;
+// let form is the object variable that stores DOM elements of the form
+let form = {
+    submit_button: document.getElementById('submit_button'),
+    name: document.getElementById('event_name'),
+    location: document.getElementById('location'),
+    start_date: document.getElementById('start_date'),
+    start_time: document.getElementById('start_time'),
+    time_zone: document.getElementById('time_zone'),
+    end_time: document.getElementById('end_time'),
+    end_date: document.getElementById('end_date')
+};
 
-function displayEvents(ev) {
+let display_table = {
+    dom: document.getElementById('display'),
+    numRows: 1
+};
 
-    ev.preventDefault();
-
-    var name = document.getElementById('event_name').value;
-    var location = document.getElementById('location').value;
-   // var start_date = docuemnt.getElementById('start_date').value;
-   // var start_time = document.getElementById('start_time').value;
-    var time_zone = document.getElementById('time_zone').value;
-   // var end_time = document.getElementById('end_time').value;
-   // var end_date = docuemnt.getElementById('end_date').value;
-
-    if  (!name || !location || !time_zone) {
-        alert("Please fill all the boxes");
-        return;
+display_table.addRow = function(values) {
+  
+    let row = display_table.dom.insertRow(display_table.numRows);
+    
+    for (let i = 0; i < values.length; i++) {
+        cell = row.insertCell(i);
+        cell.innerHTML = values[i];
     }
-
-    var dispaly = document.getElementById('display');
     
-    var newRow = dispaly.insertRow(row);
-    
-    var cell1 = newRow.insertCell(0);
-    var cell2 = newRow.insertCell(1);
-    //  this is for start_date ---> var cell3 = newRow.insertCell(2)    
-    //  start_time ----> var cell4 = newRow.insertCell(3);
-    var cell5 = newRow.insertCell(2);
-   // var cell6 = newRow.insertCell(5);
-    
-    
-    cell1.innerHTML = name;
-    cell2.innerHTML = location;
-    cell5.innerHTML = time_zone;
-   // cell6.innerHTML = end_time;
-
-    row++;
-
-
+    // push adds array of values to the array of rows
+    // makes sure that the rows array is having the right length
+    // so it adds rows pragmaticaly (pravilno)
+    display_table.numRows++
     
 }
 
+// FUTURE TO ADD FUNCTIONALITY TO CHANGE THE ALREADY CREATED VALUE
+// 
 
 
-///// Right now I can upload to the rows but I have to figure out
-//// why it can only have 3 cells or 3 rows
-
-
-
-
-
-
-
-
-// Resets the Form if the data filled in is not Accurate
-
-// //// ********* Issue to fix-->(program it so it can reset the data no matter
-// //// ********* if all the inputs are filled)
-
-// const reset = function(ev) {
-
-//     ev.preventDefault();
-
-
-//     document.getElementById('user_form').reset();
+// function add2(x){
+//     return x + 2
 // }
 
-// const send = function(ev) { 
-    
-//     ev.preventDefault();
-    
-//     ev.stopPropagation();
+// let add2 = (x) => x + 2;
 
-//     let ret = validate();
+// form.submit_button.addEventListener('click', (event) => display_table.addRow(event, 5));
 
-//     if (ret) {
+form.submit_button.addEventListener(
+    'click', 
+    function(event) {
+        event.preventDefault();
+        display_table.addRow([
+            form.name.value,
+            form.location.value,
+            form.start_date.value,
+            form.start_time.value,
+            form.time_zone.value,
+            form.end_time.value,
+            form.end_date.value
+        ]);
+    }
+);
 
-      
-//         document.getElementById('user_form').submit();
-        
-
-//     }else{
-
-//         let err = document.querySelector('.error');
-        
-//         let input = err.querySelector('input');
-        
-//         err.setAttribute('data-errormsg', ' ... Missing ${input.placeholder}');
-//     }
-    
-// }
-
-// const init = function () {
-
-//     document.getElementById('reset_button').addEventListener('click', reset);
-     
-//      document.getElementById('submit_button').addEventListener('click', send);
-     
-//  }
- 
-
-
-// const validate = function(ev) {
-//     let valid = false;
-
-//     let event_name = document.getElementById('event_name');
-//     let location = document.getElementById('location');
-//     let starting_date = document.getElementById('start_date');
-//     let starting_time = document.getElementById('start_time');
-//     let time_zone = document.getElementById('time_zone');
-//     let ending_time = document.getElementById('end_time');
-//     let ending_date = document.getElementById('end_date');
-    
-
-
-//     return true;
-    
-
-// }
-
-
-// I want to store as excel sheet
-
-//   | event name | location | startd D | end D |
-//  1.    Wedding    Nikaragua   10/4/2020    15/4/2020
-//  2     
-//  3     
-//  4     
-
-
-
-
-// let myForm = document.getElementsByName('User_Froma');
-    
-//     myForm.addEventListener('submit', (ev) => {
-//         ev.preventDefault()
-//         var event_name1 = myForm.event_name.value;
-
-//         myForm.Miodrag.value = event_name1;
-        
-
-// });
+// display_table.addRow([1,2,3,4,5,6,7])
+// figure out if QR code can store
+// values[]

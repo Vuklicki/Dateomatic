@@ -1,4 +1,5 @@
 
+
 * {
     margin:0;
     padding:0;
@@ -56,7 +57,7 @@ input {
     width: 150px;
 }
 
-input[type=submit] {
+button[type=submit] {
     position: absolute;
     top: 110%;
     left: 58%;
@@ -76,6 +77,14 @@ button[id=reset_button] {
     width: 125px;
     height: 50px; 
 
+}
+
+button[id=generate_qrcode] {
+    position: absolute;
+    top: 130%;
+    left: 30%;
+    width: 125px;
+    height: 50px;
 }
 
 
@@ -107,3 +116,5 @@ td {
     font-weight: 400;
     font-family: Georgia;
 }
+style.css
+Displaying style.css.
